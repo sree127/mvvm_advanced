@@ -1,7 +1,7 @@
 import Foundation
 
-class ValueObservable<T> {
-  var value: T {
+public class ValueObservable<T> {
+  public var value: T {
     didSet {
       DispatchQueue.main.async {
         self.valueChanged?(self.value)
@@ -11,18 +11,18 @@ class ValueObservable<T> {
   
   private var valueChanged: ((T) -> Void)?
   
-  init(value: T) {
+  public init(value: T) {
     self.value = value
   }
   
-  func addObserver(fireNow: Bool = true, _ onChange: ((T) -> Void)?) {
+  public func addObserver(fireNow: Bool = true, _ onChange: ((T) -> Void)?) {
     valueChanged = onChange
     if fireNow {
       onChange?(value)
     }
   }
   
-  func removeObserver() {
+  public func removeObserver() {
     valueChanged = nil
   }
 }
