@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-public class MyViewController : UITableViewController {
+public class MyViewController : UITableViewController, PersonListViewProtocol {
   
   let viewModel: ViewModel
   

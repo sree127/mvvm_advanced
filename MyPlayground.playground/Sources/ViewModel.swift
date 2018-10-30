@@ -23,19 +23,19 @@ public class ViewModel {
     
     var details = [SectionViewModel]()
     
-    getPerson { person in
-      let personModel = PersonModel(name: person)
-      let sectionViewModel = SectionViewModel(rowViewModel: personModel)
-      details.append(sectionViewModel)
-      self.sections.value.append(sectionViewModel)
-    }
-    
-    getAddress { address in
-      let addressModel = AddressModel(address: address)
-      let sectionViewModel = SectionViewModel(rowViewModel: addressModel)
-      details.append(sectionViewModel)
-      self.sections.value.append(sectionViewModel)
-    }
+//    getPerson { person in
+//      let personModel = PersonModel(name: person)
+//      let sectionViewModel = SectionViewModel(rowViewModel: personModel)
+//      details.append(sectionViewModel)
+//      self.sections.value.append(sectionViewModel)
+//    }
+//    
+//    getAddress { address in
+//      let addressModel = AddressModel(address: address)
+//      let sectionViewModel = SectionViewModel(rowViewModel: addressModel)
+//      details.append(sectionViewModel)
+//      self.sections.value.append(sectionViewModel)
+//    }
   }
   
   func getPerson(callback: @escaping (String) -> Void) {
